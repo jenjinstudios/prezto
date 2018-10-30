@@ -10,4 +10,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+##### Environment Variables #####
+
+##### Aliases #####
+
+alias vi=vim
+alias today="date \"+%Y-%m-%d\""
+alias tomorrow="date -v +1d \"+%Y-%m-%d\""
+
+##### Functions #####
+function tabname {
+  echo -ne "\033]0;"$*"\007"
+}
+
+##### Vim command line editor #####
+bindkey -v
+export KEYTIMEOUT=1
+
 # Customize to your needs...
